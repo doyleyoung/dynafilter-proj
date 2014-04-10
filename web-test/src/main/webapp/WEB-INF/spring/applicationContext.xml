@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<context:component-scan base-package="org.dynafilter.controller" />
+	<mvc:annotation-driven />
+	<bean class="org.dynafilter.DynaFilterFactory">
+		<property name="namedFilters">
+			<list>
+				<bean class="org.dynafilter.NamedDynaFilter">
+					<constructor-arg value="userName" />
+					<constructor-arg value="org.dynafilter.controller.User" />
+					<constructor-arg value="id,name" />
+				</bean>
+                <bean class="org.dynafilter.NamedDynaFilter">
+                    <constructor-arg value="addressUsers" />
+                    <constructor-arg value="org.dynafilter.controller.Address" />
+                    <constructor-arg value="id,users" />
+                </bean>
+			</list>
+		</property>
+	</bean>
+	<context:annotation-config />
+
+</beans>
