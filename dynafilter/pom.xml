@@ -52,4 +52,10 @@
 		</plugins>
 	</build>
 
+	<scm>
+		<url>git@github.com:bmsantos/dynafilter-proj.git</url>
+		<connection>scm:git:git@github.com:bmsantos/dynafilter-proj.git</connection>
+		<developerConnection>scm:git:git@github.com:bmsantos/dynafilter-proj.git</developerConnection>
+	</scm>
+	
 </project>
