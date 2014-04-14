@@ -1,4 +1,4 @@
-package org.dynafilter.annotation;
+package com.github.bmsantos.dynafilter.annotation;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;

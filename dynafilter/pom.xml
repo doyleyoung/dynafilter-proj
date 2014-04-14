@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.dynafilter</groupId>
+		<groupId>com.github.bmsantos</groupId>
 		<artifactId>dynafilter-proj</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
@@ -49,13 +49,28 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
-	<scm>
-		<url>git@github.com:bmsantos/dynafilter-proj.git</url>
-		<connection>scm:git:git@github.com:bmsantos/dynafilter-proj.git</connection>
-		<developerConnection>scm:git:git@github.com:bmsantos/dynafilter-proj.git</developerConnection>
-	</scm>
-	
 </project>

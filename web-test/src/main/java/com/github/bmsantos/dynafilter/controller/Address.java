@@ -1,7 +1,7 @@
-package org.dynafilter.controller;
+package com.github.bmsantos.dynafilter.controller;
 
+import static com.github.bmsantos.dynafilter.controller.User.generateUser;
 import static java.util.Arrays.asList;
-import static org.dynafilter.controller.User.generateUser;
 
 import java.util.List;
 

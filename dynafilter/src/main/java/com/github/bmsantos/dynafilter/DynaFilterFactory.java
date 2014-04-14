@@ -1,4 +1,4 @@
-package org.dynafilter;
+package com.github.bmsantos.dynafilter;
 
 import java.util.ArrayList;
 import java.util.List;

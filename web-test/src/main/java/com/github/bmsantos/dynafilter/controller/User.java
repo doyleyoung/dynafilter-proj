@@ -1,4 +1,4 @@
-package org.dynafilter.controller;
+package com.github.bmsantos.dynafilter.controller;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

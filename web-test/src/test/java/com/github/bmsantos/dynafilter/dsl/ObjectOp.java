@@ -1,4 +1,4 @@
-package org.dynafilter.dsl;
+package com.github.bmsantos.dynafilter.dsl;
 
 import java.util.List;
 

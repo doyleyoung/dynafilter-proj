@@ -9,19 +9,19 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
-	<context:component-scan base-package="org.dynafilter.controller" />
+	<context:component-scan base-package="com.github.bmsantos.dynafilter.controller" />
 	<mvc:annotation-driven />
-	<bean class="org.dynafilter.DynaFilterFactory">
+	<bean class="com.github.bmsantos.dynafilter.DynaFilterFactory">
 		<property name="namedFilters">
 			<list>
-				<bean class="org.dynafilter.NamedDynaFilter">
+				<bean class="com.github.bmsantos.dynafilter.NamedDynaFilter">
 					<constructor-arg value="userName" />
-					<constructor-arg value="org.dynafilter.controller.User" />
+					<constructor-arg value="com.github.bmsantos.dynafilter.controller.User" />
 					<constructor-arg value="id,name" />
 				</bean>
-                <bean class="org.dynafilter.NamedDynaFilter">
+                <bean class="com.github.bmsantos.dynafilter.NamedDynaFilter">
                     <constructor-arg value="addressUsers" />
-                    <constructor-arg value="org.dynafilter.controller.Address" />
+                    <constructor-arg value="com.github.bmsantos.dynafilter.controller.Address" />
                     <constructor-arg value="id,users" />
                 </bean>
 			</list>

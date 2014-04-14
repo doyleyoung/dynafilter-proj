@@ -1,4 +1,4 @@
-package org.dynafilter.annotation;
+package com.github.bmsantos.dynafilter.annotation;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.Mapping;
 @Retention(value = RUNTIME)
 @Inherited
 @Mapping
-public @interface DynaFilter {
-	Class<?> value();
-	String[] fields();
-	boolean includeNulls() default false;
+public @interface DynaFilters {
+	DynaFilter[] value();
 }

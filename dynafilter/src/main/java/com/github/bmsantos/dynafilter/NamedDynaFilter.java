@@ -1,10 +1,10 @@
-package org.dynafilter;
+package com.github.bmsantos.dynafilter;
 
 import java.lang.annotation.Annotation;
 
 import javax.enterprise.util.AnnotationLiteral;
 
-import org.dynafilter.annotation.DynaFilter;
+import com.github.bmsantos.dynafilter.annotation.DynaFilter;
 
 public class NamedDynaFilter extends AnnotationLiteral<DynaFilter> implements DynaFilter {
 

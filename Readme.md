@@ -46,18 +46,18 @@ public @ResponseBody List<Object> shouldUseNamedFitlers() {
 and configure the named filters in the respective factory:
 
 ```xml
-    <bean class="org.dynafilter.DynaFilterFactory">
+    <bean class="com.github.bmsantos.dynafilter.DynaFilterFactory">
         <property name="namedFilters">
             <list>
-                <bean class="org.dynafilter.NamedDynaFilter">
+                <bean class="com.github.bmsantos.dynafilter.NamedDynaFilter">
                     <constructor-arg value="userAge" /> // Filter name
-                    <constructor-arg value="org.dynafilter.controller.User" /> // Type
+                    <constructor-arg value="com.github.bmsantos.dynafilter.controller.User" /> // Type
                     <constructor-arg value="true" /> // Include nulls
                     <constructor-arg value="id,age" /> // Fields
                 </bean>
-                <bean class="org.dynafilter.NamedDynaFilter">
+                <bean class="com.github.bmsantos.dynafilter.NamedDynaFilter">
                     <constructor-arg value="addressOnly" /> // Filter name
-                    <constructor-arg value="org.dynafilter.controller.Address" /> // Type
+                    <constructor-arg value="com.github.bmsantos.dynafilter.controller.Address" /> // Type
                     <constructor-arg value="id,address" /> // Field
                 </bean>
             </list>
@@ -81,7 +81,7 @@ When looking for the configured fields, the lookup strategy is the following:
 Add the DynaFilterFactory to your Spring MVC Context configuration xml or bean:
 
 ```xml
-    <bean class="org.dynafilter.DynaFilterFactory" />
+    <bean class="com.github.bmsantos.dynafilter.DynaFilterFactory" />
 ```
 
 or

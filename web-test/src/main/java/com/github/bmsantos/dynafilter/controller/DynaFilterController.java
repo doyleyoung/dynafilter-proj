@@ -1,17 +1,17 @@
-package org.dynafilter.controller;
+package com.github.bmsantos.dynafilter.controller;
 
+import static com.github.bmsantos.dynafilter.controller.Address.generateAddress;
+import static com.github.bmsantos.dynafilter.controller.Car.generateCar;
+import static com.github.bmsantos.dynafilter.controller.Composite.generateComposite;
+import static com.github.bmsantos.dynafilter.controller.User.generateUser;
 import static java.util.Arrays.asList;
-import static org.dynafilter.controller.Address.generateAddress;
-import static org.dynafilter.controller.Car.generateCar;
-import static org.dynafilter.controller.Composite.generateComposite;
-import static org.dynafilter.controller.User.generateUser;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 import java.util.List;
 
-import org.dynafilter.annotation.DynaFilter;
-import org.dynafilter.annotation.DynaFilters;
-import org.dynafilter.annotation.NamedDynaFilters;
+import com.github.bmsantos.dynafilter.annotation.DynaFilter;
+import com.github.bmsantos.dynafilter.annotation.DynaFilters;
+import com.github.bmsantos.dynafilter.annotation.NamedDynaFilters;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

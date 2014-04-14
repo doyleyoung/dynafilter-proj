@@ -1,4 +1,4 @@
-package org.dynafilter.dsl;
+package com.github.bmsantos.dynafilter.dsl;
 
 public interface ListOp {
 

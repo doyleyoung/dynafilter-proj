@@ -1,4 +1,4 @@
-package org.dynafilter;
+package com.github.bmsantos.dynafilter;
 
 import static org.springframework.util.ClassUtils.isPrimitiveOrWrapper;
 import static org.springframework.util.ReflectionUtils.findMethod;
@@ -14,14 +14,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.dynafilter.annotation.DynaFilter;
-import org.dynafilter.annotation.DynaFilters;
-import org.dynafilter.annotation.NamedDynaFilters;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.method.support.ModelAndViewContainer;
+
+import com.github.bmsantos.dynafilter.annotation.DynaFilter;
+import com.github.bmsantos.dynafilter.annotation.DynaFilters;
+import com.github.bmsantos.dynafilter.annotation.NamedDynaFilters;
 
 @Component
 public class DynaFilterHandler implements

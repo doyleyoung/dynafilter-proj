@@ -1,7 +1,7 @@
-package org.dynafilter.controller;
+package com.github.bmsantos.dynafilter.controller;
 
-import static org.dynafilter.controller.Address.generateAddress;
-import static org.dynafilter.controller.User.generateUser;
+import static com.github.bmsantos.dynafilter.controller.Address.generateAddress;
+import static com.github.bmsantos.dynafilter.controller.User.generateUser;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

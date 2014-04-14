@@ -1,10 +1,10 @@
-package org.dynafilter.annotation;
+package com.github.bmsantos.dynafilter.annotation;
 
+import static com.github.bmsantos.dynafilter.controller.Address.generateAddress;
+import static com.github.bmsantos.dynafilter.controller.Composite.generateComposite;
+import static com.github.bmsantos.dynafilter.controller.User.generateUser;
+import static com.github.bmsantos.dynafilter.dsl.JSonDeserializer.useJson;
 import static java.util.Arrays.asList;
-import static org.dynafilter.controller.Address.generateAddress;
-import static org.dynafilter.controller.Composite.generateComposite;
-import static org.dynafilter.controller.User.generateUser;
-import static org.dynafilter.dsl.JSonDeserializer.useJson;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -18,13 +18,14 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
-import org.dynafilter.controller.Address;
-import org.dynafilter.controller.Car;
-import org.dynafilter.controller.Composite;
-import org.dynafilter.controller.User;
-import org.dynafilter.dsl.ListOp;
-import org.dynafilter.dsl.ObjectOp;
 import org.junit.Test;
+
+import com.github.bmsantos.dynafilter.controller.Address;
+import com.github.bmsantos.dynafilter.controller.Car;
+import com.github.bmsantos.dynafilter.controller.Composite;
+import com.github.bmsantos.dynafilter.controller.User;
+import com.github.bmsantos.dynafilter.dsl.ListOp;
+import com.github.bmsantos.dynafilter.dsl.ObjectOp;
 
 public class DynaFilterTest {
 
