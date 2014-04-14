@@ -20,7 +20,7 @@
     <header>
       <div class="inner">
         <h1>Dyna Filter</h1>
-        <h2>Dynamic Object filtering for Json</h2>
+        <h2>Dynamic Object Filtering</h2>
         <a href="https://github.com/bmsantos/dynafilter-proj" class="button"><small>View project on</small>GitHub</a>
       </div>
     </header>
@@ -31,7 +31,7 @@
           <h3>
 <a name="dyna-filter" class="anchor" href="#dyna-filter"><span class="octicon octicon-link"></span></a>Dyna Filter</h3>
 
-<p>JSON Dynamic Object filtering for Spring Framework applications.</p>
+<p>Dynamic Object filtering for Json serialization.</p>
 
 <p>This library provides a non-intrusive way to dynamically filter the desired fields to be passed for a serialization mechanism.</p>
 
@@ -74,18 +74,18 @@
 
 <p>and configure the named filters in the respective factory:</p>
 
-<div class="highlight highlight-xml"><pre>    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.dynafilter.DynaFilterFactory"</span><span class="nt">&gt;</span>
+<div class="highlight highlight-xml"><pre>    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"com.github.bmsantos.dynafilter.DynaFilterFactory"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"namedFilters"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;list&gt;</span>
-                <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.dynafilter.NamedDynaFilter"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"com.github.bmsantos.dynafilter.NamedDynaFilter"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"userAge"</span> <span class="nt">/&gt;</span> // Filter name
-                    <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"org.dynafilter.controller.User"</span> <span class="nt">/&gt;</span> // Type
+                    <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"com.github.bmsantos.dynafilter.controller.User"</span> <span class="nt">/&gt;</span> // Type
                     <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span> // Include nulls
                     <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"id,age"</span> <span class="nt">/&gt;</span> // Fields
                 <span class="nt">&lt;/bean&gt;</span>
-                <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.dynafilter.NamedDynaFilter"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"com.github.bmsantos.dynafilter.NamedDynaFilter"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"addressOnly"</span> <span class="nt">/&gt;</span> // Filter name
-                    <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"org.dynafilter.controller.Address"</span> <span class="nt">/&gt;</span> // Type
+                    <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"com.github.bmsantos.dynafilter.controller.Address"</span> <span class="nt">/&gt;</span> // Type
                     <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"id,address"</span> <span class="nt">/&gt;</span> // Field
                 <span class="nt">&lt;/bean&gt;</span>
             <span class="nt">&lt;/list&gt;</span>
@@ -110,7 +110,7 @@
 
 <p>Add the DynaFilterFactory to your Spring MVC Context configuration xml or bean:</p>
 
-<div class="highlight highlight-xml"><pre>    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"org.dynafilter.DynaFilterFactory"</span> <span class="nt">/&gt;</span>
+<div class="highlight highlight-xml"><pre>    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"com.github.bmsantos.dynafilter.DynaFilterFactory"</span> <span class="nt">/&gt;</span>
 </pre></div>
 
 <p>or</p>
