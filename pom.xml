@@ -12,7 +12,7 @@
 	<groupId>com.github.bmsantos</groupId>
 	<artifactId>dynafilter-proj</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<url>http://maven.apache.org</url>
 
