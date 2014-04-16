@@ -6,6 +6,16 @@ This library provides a non-intrusive way to dynamically filter the desired fiel
 
 Although designed to be used with Json, other serialization mechanism (e.g. binary) could also make use of the filter.
 
+#### Current Release
+
+```xml
+<dependency>
+	<groupId>com.github.bmsantos</groupId>
+	<artifactId>dynafilter</artifactId>
+	<version>1.0.0</version>
+</dependency>
+```
+
 #### How it works?
 
 Use the **@DynaFilter** annotation to filter out the fields of interest of any given data type and applied to the usual request handler method:
