@@ -2,9 +2,9 @@
 
 Dynamic Object filtering for Json serialization.
 
-This library provides a non-intrusive way to dynamically filter the desired fields to be passed for a serialization mechanism.
+This library provides a non-intrusive way to dynamically filter fields for serialization.
 
-Although designed to be used with Json, other serialization mechanism (e.g. binary) could also make use of the filter.
+Although designed to be used with JSON, any other serialization mechanism (e.g. binary) could also make use of the filter.
 
 #### Current Release
 
@@ -16,9 +16,9 @@ Although designed to be used with Json, other serialization mechanism (e.g. bina
 </dependency>
 ```
 
-#### How it works?
+#### How does it work?
 
-Use the **@DynaFilter** annotation to filter out the fields of interest of any given data type and applied to the usual request handler method:
+The **@DynaFilter** annotation is used to filter out the fields of interest from any data type and works in conjunction with the usual request handler method:
 
 ```java
 @RequestMapping(value = "collection", method = GET, produces = "application/json")
@@ -28,7 +28,7 @@ public @ResponseBody List<Data> returnCollection() {
 }
 ```
 
-The annotation get's processed by a spring handler when necessary (similar in concept to a interceptor).
+When necessary, the annotation is processed by a Spring handler. This is similar to the mechanism use by an interceptor.
  
 To filter multiple data types use **@DynaFilters** to wrap multiple **@DynaFilter** annotations.
 
@@ -43,7 +43,7 @@ public @ResponseBody List<Object> returnHybrid() {
 }
 ```
 
-For reusability use **@NamedDynaFilters** annotation:
+To use the same filter multiple times, use the **@NamedDynaFilters** annotation:
 
 ```java
 @RequestMapping(value = "named", method = GET, produces = "application/json")
@@ -77,7 +77,7 @@ and configure the named filters in the respective factory:
 
 #### Lookup strategy
 
-When looking for the configured fields, the lookup strategy is the following:
+When looking for fields listed in the annotation, the following lookup strategy is used:
 
 1. Fields/attributes/properties
 2. Access methods (Camel cased methods that start with *get*) [1]
@@ -88,7 +88,7 @@ When looking for the configured fields, the lookup strategy is the following:
 
 #### Usage
 
-Add the DynaFilterFactory to your Spring MVC Context configuration xml or bean:
+Add the DynaFilterFactory to your Spring MVC Context configuration XML or bean:
 
 ```xml
     <bean class="com.github.bmsantos.dynafilter.DynaFilterFactory" />
@@ -108,21 +108,19 @@ public class AppConfig {
 }
 ```
 
-And annotate the controller or any other bean with the one or more filter annotation as shown in the "How it works?" section above.
-Make sure you look into the provided test controller and spring context for a working example.
+Annotate the controller or any other bean with one or more filter annotations as shown in the "How does it work?" section above.
+The provided test controller and Spring context files demonstrate how easy it is with a working example.
 
 #### Build project and run tests
 
     mvn clean install
-
-.
 
 #### Manual test execution
 
 	cd web-test
 	mvn jetty:run
     
-Then point your browser to:
+Then use the following links to see examples of:
 
 1. [Simple instance with primitive types](http://localhost:8080/jsonfilter/simple)
 2. [Collection of simple instances](http://localhost:8080/jsonfilter/collection)
