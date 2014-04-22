@@ -33,9 +33,9 @@
 
 <p>Dynamic Object filtering for Json serialization.</p>
 
-<p>This library provides a non-intrusive way to dynamically filter the desired fields to be passed for a serialization mechanism.</p>
+<p>This library provides a non-intrusive way to dynamically filter fields for serialization.</p>
 
-<p>Although designed to be used with Json, other serialization mechanism (e.g. binary) could also make use of the filter.</p>
+<p>Although designed to be used with JSON, any other serialization mechanism (e.g. binary) could also make use of the filter.</p>
 
 <h4>
 <a name="current-release" class="anchor" href="#current-release"><span class="octicon octicon-link"></span></a>Current Release</h4>
@@ -48,9 +48,9 @@
 </pre></div>
 
 <h4>
-<a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it works?</h4>
+<a name="how-does-it-work" class="anchor" href="#how-does-it-work"><span class="octicon octicon-link"></span></a>How does it work?</h4>
 
-<p>Use the <strong>@DynaFilter</strong> annotation to filter out the fields of interest of any given data type and applied to the usual request handler method:</p>
+<p>The <strong>@DynaFilter</strong> annotation is used to filter out the fields of interest from any data type and works in conjunction with the usual request handler method:</p>
 
 <div class="highlight highlight-java"><pre><span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"collection"</span><span class="o">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">GET</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
 <span class="nd">@DynaFilter</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">fields</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"name"</span><span class="o">,</span> <span class="s">"description"</span> <span class="o">},</span> <span class="n">includeNulls</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
@@ -59,7 +59,7 @@
 <span class="o">}</span>
 </pre></div>
 
-<p>The annotation get's processed by a spring handler when necessary (similar in concept to a interceptor).</p>
+<p>When necessary, the annotation is processed by a Spring handler. This is similar to the mechanism use by an interceptor.</p>
 
 <p>To filter multiple data types use <strong>@DynaFilters</strong> to wrap multiple <strong>@DynaFilter</strong> annotations.</p>
 
@@ -73,7 +73,7 @@
 <span class="o">}</span>
 </pre></div>
 
-<p>For reusability use <strong>@NamedDynaFilters</strong> annotation:</p>
+<p>To use the same filter multiple times, use the <strong>@NamedDynaFilters</strong> annotation:</p>
 
 <div class="highlight highlight-java"><pre><span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"named"</span><span class="o">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">GET</span><span class="o">,</span> <span class="n">produces</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="o">)</span>
 <span class="nd">@NamedDynaFilters</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"userAge"</span><span class="o">,</span> <span class="s">"addressOnly"</span> <span class="o">})</span>
@@ -106,7 +106,7 @@
 <h4>
 <a name="lookup-strategy" class="anchor" href="#lookup-strategy"><span class="octicon octicon-link"></span></a>Lookup strategy</h4>
 
-<p>When looking for the configured fields, the lookup strategy is the following:</p>
+<p>When looking for fields listed in the annotation, the following lookup strategy is used:</p>
 
 <ol>
 <li>Fields/attributes/properties</li>
@@ -118,7 +118,7 @@
 <h4>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h4>
 
-<p>Add the DynaFilterFactory to your Spring MVC Context configuration xml or bean:</p>
+<p>Add the DynaFilterFactory to your Spring MVC Context configuration XML or bean:</p>
 
 <div class="highlight highlight-xml"><pre>    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">"com.github.bmsantos.dynafilter.DynaFilterFactory"</span> <span class="nt">/&gt;</span>
 </pre></div>
@@ -136,16 +136,14 @@
 <span class="o">}</span>
 </pre></div>
 
-<p>And annotate the controller or any other bean with the one or more filter annotation as shown in the "How it works?" section above.
-Make sure you look into the provided test controller and spring context for a working example.</p>
+<p>Annotate the controller or any other bean with one or more filter annotations as shown in the "How does it work?" section above.
+The provided test controller and Spring context files demonstrate how easy it is with a working example.</p>
 
 <h4>
 <a name="build-project-and-run-tests" class="anchor" href="#build-project-and-run-tests"><span class="octicon octicon-link"></span></a>Build project and run tests</h4>
 
 <pre><code>mvn clean install
 </code></pre>
-
-<p>.</p>
 
 <h4>
 <a name="manual-test-execution" class="anchor" href="#manual-test-execution"><span class="octicon octicon-link"></span></a>Manual test execution</h4>
@@ -154,7 +152,7 @@ Make sure you look into the provided test controller and spring context for a wo
 mvn jetty:run
 </code></pre>
 
-<p>Then point your browser to:</p>
+<p>Then use the following links to see examples of:</p>
 
 <ol>
 <li><a href="http://localhost:8080/jsonfilter/simple">Simple instance with primitive types</a></li>
