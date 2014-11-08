@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bmsantos/dynafilter-proj.svg)](https://travis-ci.org/bmsantos/dynafilter-proj)
+[![Build Status](https://travis-ci.org/bmsantos/dynafilter-proj.svg?branch=master)](https://travis-ci.org/bmsantos/dynafilter-proj)
 ### Dyna Filter
 
 Dynamic Object filtering for Json serialization.
