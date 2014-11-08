@@ -4,8 +4,6 @@ Dynamic Object filtering for Json serialization.
 
 This library provides a non-intrusive way to dynamically filter fields for serialization.
 
-Although designed to be used with JSON, any other serialization mechanism (e.g. binary) could also make use of the filter.
-
 #### Current Release
 
 ```xml
