@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/bmsantos/dynafilter-proj.svg)](https://travis-ci.org/bmsantos/dynafilter-proj)
 ### Dyna Filter
 
 Dynamic Object filtering for Json serialization.
