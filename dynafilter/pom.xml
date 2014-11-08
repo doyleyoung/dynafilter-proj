@@ -48,6 +48,17 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 			</plugin>
+		</plugins>
+	</build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+      	        <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+            <plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
@@ -69,7 +80,10 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
-	</build>
+			</plugins>
+			</build>
+        </profile>
+    </profiles>
+	
 
 </project>
